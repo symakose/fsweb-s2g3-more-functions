@@ -25,7 +25,7 @@ function dosyaAdiniBul(path) {
   return yeniDosya[yeniDosya.length - 1];
 }
 
-console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
+console.log("G1:", dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 
 /*
   GÖREV 2
@@ -45,9 +45,22 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamaBul(arrSayi) {
+  if (arrSayi == 0) {
+    return null;
+  } else {
+    const toplam = arrSayi.reduce((total, Sayi) => {
+      return total + Sayi;
+    }, 0);
+    return toplam / arrSayi.length;
+  }
 }
+
+const bosDizi = [];
+const tekSayi = [4];
+const sayilar3 = [50, -26, 153, 7];
+const sayilar4 = [109, 216, 288, 143, 71, 185, -278, 194, 5];
+console.log(ortalamaBul(bosDizi, tekSayi, sayilar3, sayilar4));
 
 /*
   GÖREV 3
