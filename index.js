@@ -55,12 +55,11 @@ function ortalamaBul(arrSayi) {
     return toplam / arrSayi.length;
   }
 }
-
 const bosDizi = [];
 const tekSayi = [4];
 const sayilar3 = [50, -26, 153, 7];
 const sayilar4 = [109, 216, 288, 143, 71, 185, -278, 194, 5];
-console.log(ortalamaBul(bosDizi, tekSayi, sayilar3, sayilar4));
+console.log("G2", ortalamaBul(bosDizi, tekSayi, sayilar3, sayilar4));
 
 /*
   GÖREV 3
@@ -82,9 +81,19 @@ console.log(ortalamaBul(bosDizi, tekSayi, sayilar3, sayilar4));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arr, ortSayi) {
+  if (arr === 0) {
+    return null;
+  } else {
+    const ort = ortSayi(arr);
+    const yeniDizi = arr.filter((sayi) => sayi >= ort);
+    return yeniDizi;
+  }
 }
+console.log("G3:", ortalamadanBuyukleriBul(bosDizi, ortalamaBul));
+console.log("G3:", ortalamadanBuyukleriBul(tekSayi, ortalamaBul));
+console.log("G3:", ortalamadanBuyukleriBul(sayilar3, ortalamaBul));
+console.log("G3:", ortalamadanBuyukleriBul(sayilar4, ortalamaBul));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
